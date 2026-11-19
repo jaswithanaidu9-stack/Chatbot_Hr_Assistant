@@ -266,10 +266,10 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <div className="footer-brand">
+        {/* <div className="footer-brand">
           <ShieldCheck size={21} />
-          i<span>Space</span>
-        </div>
+          iSpace
+        </div> */}
 
         <p>
           Your intelligent HR policy assistant.
