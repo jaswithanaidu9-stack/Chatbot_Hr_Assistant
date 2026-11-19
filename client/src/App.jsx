@@ -92,7 +92,7 @@ function App() {
         <div className="brand">
           <ShieldCheck size={30} />
           <span>
-            People<span className="brand-highlight">Care</span>
+            i<span className="brand-highlight">Space</span>
           </span>
         </div>
 
@@ -268,7 +268,7 @@ function App() {
       <footer>
         <div className="footer-brand">
           <ShieldCheck size={21} />
-          People<span>Care</span>
+          i<span>Space</span>
         </div>
 
         <p>
