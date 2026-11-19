@@ -2,14 +2,16 @@
 import { useState } from "react";
 import axios from "axios";
 import {
-  Bot,
   X,
   Send,
-  User,
   RotateCcw
 } from "lucide-react";
+
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import hrbot from "../../public/images/HR-icon.jpg";
+import employeeIcon from "../../public/images/empoyee-icon.jpg";
+import chartbot from "../../public/images/chartbot.jpg";
 
 function ChatBot({ onClose }) {
 
@@ -80,7 +82,7 @@ function ChatBot({ onClose }) {
     setMessages([
       {
         role: "assistant",
-        text: "Hello! 👋 ispace hr assistant. How can I help you?"
+        text: "Hello! 👋 Welcome to ispace hr assistant. How can I help you?"
       }
     ]);
   };
@@ -92,17 +94,20 @@ function ChatBot({ onClose }) {
       <div className="chat-header">
 
         <div className="chat-profile">
+
           <div className="bot-avatar">
-            <Bot size={23} />
+            <img src={hrbot} alt="HR Assistant Bot"/>
           </div>
 
           <div>
             <h3>HR Policy Assistant</h3>
             <span>● Online</span>
           </div>
+
         </div>
 
         <div className="chat-actions">
+
           <button onClick={resetChat} title="New chat">
             <RotateCcw size={17} />
           </button>
@@ -110,6 +115,7 @@ function ChatBot({ onClose }) {
           <button onClick={onClose} title="Close chat">
             <X size={21} />
           </button>
+
         </div>
 
       </div>
@@ -124,27 +130,49 @@ function ChatBot({ onClose }) {
             className={`chat-message ${msg.role}`}
           >
 
+            {/* Employee and Bot Images */}
             <div className="message-avatar">
-              {msg.role === "assistant"
-                ? <Bot size={18} />
-                : <User size={18} />
-              }
+
+              {msg.role === "assistant" ? (
+
+                <img
+                  src={chartbot}
+                  alt="HR Assistant"
+                />
+
+              ) : (
+
+                <img
+                  src={employeeIcon}
+                  alt="Employee"
+                />
+
+              )}
+
             </div>
 
+            {/* Message Content */}
             <div className="message-text">
-  {msg.role === "assistant" ? (
-    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-      {msg.text}
-    </ReactMarkdown>
-  ) : (
-    msg.text
-  )}
-</div>
+
+              {msg.role === "assistant" ? (
+
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {msg.text}
+                </ReactMarkdown>
+
+              ) : (
+
+                msg.text
+
+              )}
+
+            </div>
 
           </div>
 
         ))}
 
+        {/* Typing Indicator */}
         {loading && (
           <div className="typing">
             <span></span>
@@ -156,18 +184,24 @@ function ChatBot({ onClose }) {
 
         {/* Suggested Questions */}
         {messages.length === 1 && !loading && (
+
           <div className="suggestions">
+
             <p>Suggested questions</p>
 
             {suggestions.map((item, index) => (
+
               <button
                 key={index}
                 onClick={() => sendMessage(item)}
               >
                 {item}
               </button>
+
             ))}
+
           </div>
+
         )}
 
       </div>

@@ -296,6 +296,7 @@ footer {
   }
 }
 
+
 /* Chat Header */
 
 .chat-header {
@@ -313,14 +314,23 @@ footer {
   gap: 12px;
 }
 
+/* Chatbot Header Image */
 .bot-avatar {
-  background: #ffffff25;
-  border-radius: 50%;
   width: 42px;
   height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.bot-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chat-profile h3 {
@@ -345,6 +355,7 @@ footer {
   cursor: pointer;
 }
 
+
 /* Chat Body */
 
 .chat-body {
@@ -361,17 +372,29 @@ footer {
   align-items: flex-start;
 }
 
+/* Employee and AI Bot Images */
+
 .message-avatar {
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  background: #e1ebff;
-  color: #174ea6;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #e1ebff;
+  flex-shrink: 0;
 }
+
+.message-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Message Content */
 
 .message-text {
   max-width: 85%;
@@ -391,14 +414,10 @@ footer {
   flex-direction: row-reverse;
 }
 
-.chat-message.user .message-avatar {
-  background: #d9f2ee;
-  color: #159b98;
-}
-
 .chat-message.user .message-text {
   background: #e8f1ff;
 }
+
 
 /* Suggestions */
 
