@@ -379,9 +379,12 @@ footer {
   background: white;
   border-radius: 10px;
   font-size: 13px;
-  line-height: 1.7;
+  /* line-height: 1.7; */
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+.message-text ul {
+  padding-left: 20px;
 }
 
 .chat-message.user {
@@ -543,3 +546,258 @@ footer {
     font-size: 38px;
   }
 }
+
+
+/* =================================
+   TECHNOLOGY SECTION
+================================= */
+
+.technology-section {
+  padding: 80px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin: 0 auto 45px;
+}
+
+.section-heading > span {
+  color: #159b98;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  color: #173568;
+  font-size: clamp(27px, 4vw, 36px);
+  margin: 15px 0;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Technology Grid */
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.technology-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-6px);
+  border-color: #b9d3f5;
+  box-shadow: 0 12px 30px #174ea615;
+}
+
+.technology-icon {
+  width: 55px;
+  height: 55px;
+  background: #edf5ff;
+  color: #174ea6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.technology-card h3 {
+  color: #173568;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.technology-card p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =================================
+   HOW IT WORKS SECTION
+================================= */
+
+.how-it-works {
+  padding: 85px 8%;
+  background: linear-gradient(120deg, #edf5ff, #f9fbff);
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+
+.step-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #174ea615;
+}
+
+.step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.step-number {
+  font-size: 25px;
+  font-weight: 800;
+  color: #d5e3f7;
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  background: #edf5ff;
+  color: #174ea6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+}
+
+.step-card h3 {
+  color: #173568;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Bottom CTA */
+
+.how-it-works-button {
+  margin: 55px auto 0;
+}
+
+.how-it-works-button h3 {
+  color: #173568;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.how-it-works-button p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.how-it-works-button .hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+  background: #ffffff;
+  border-top: 1px solid #e8edf5;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #174ea6;
+  font-size: 20px;
+  font-weight: 750;
+  margin-bottom: 10px;
+}
+
+.footer-brand span {
+  color: #159b98;
+}
+
+footer p {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .technology-section,
+  .how-it-works {
+    padding: 60px 6%;
+  }
+
+  .technology-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+}
+
