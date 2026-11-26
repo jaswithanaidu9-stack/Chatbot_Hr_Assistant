@@ -16,6 +16,7 @@ import {
 
 import { useState } from "react";
 import ChatBot from "./components/ChatBot";
+import logo from "../public/images/ispace_logo.png";
 import "./App.css";
 
 function App() {
@@ -90,10 +91,10 @@ function App() {
       <nav className="navbar">
 
         <div className="brand">
-          <ShieldCheck size={30} />
           <span>
-            i<span className="brand-highlight">Space</span>
+             <img src={logo} alt="HR Assistant Bot" className="logo-style"/>
           </span>
+          
         </div>
 
         <div className="nav-links">
